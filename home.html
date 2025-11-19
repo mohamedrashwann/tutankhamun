@@ -1,32 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="home.css" />
-
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="home.css" />
+  <title>King Tutankhamun</title>
 </head>
 <body>
-    <header>
-        <nav class="navbar">
-            <div class="logo-container">
-                <!-- <img src="shams_masr_logo.png" alt="Sun of Egypt" class="logo-img"> -->
-                <span class="logo-text">king Tutankhamun</span>
-            </div>
-            <ul class="nav-links">
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#destinations">Top Destinations</a></li>
-                <li><a href="#tours">Tour Packages</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#contact">Contact Us</a></li>
-            </ul>
-            <div class="mobile-menu-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </nav>
-    </header>
+  <!-- Navigation -->
+  <header>
+    <nav class="navbar">
+      <div class="logo-container">
+        <span class="logo-text">King Tutankhamun</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#timeline">History</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="sand-moving"></div>
+    <div class="hero-content">
+      <h1>Uncover the Legacy of the Golden Pharaoh</h1>
+      <p>Step into the ancient world of mystery, power, and eternal glory.</p>
+      <a href="#timeline" class="btn">Start Exploring</a>
+    </div>
+  </section>
+  <div class="sand-moving"></div>
+
+  <!-- Timeline Section -->
+  <section id="timeline" class="vertical-sequence">
+        <div class="sand-moving"></div>
+
+    <div class="dot">
+      <div class="pic-p">
+        <img src="./image/Gold-Mummy-Mask-of-King-Tutankhamun.png" alt="King Tut" />
+      </div>
+      <div class="text-p">
+        <h2>The Boy King</h2>
+        <p>At just nine years old, Tutankhamun ascended to the throne of Egypt, leading a civilization at its peak of grandeur.</p>
+      </div>
+    </div>
+
+    <div class="dot">
+      <div class="pic-p">
+        <img src="./image/Tut7.png" alt="Tomb" />
+      </div>
+      <div class="text-p">
+        <h2>The Tomb Discovery</h2>
+        <p>Howard Carter’s 1922 discovery revealed treasures beyond imagination — untouched for over 3,000 years.</p>
+      </div>
+    </div>
+
+    <div class="dot">
+      <div class="pic-p">
+        <img src="./image/mask.png" alt="Mask" />
+      </div>
+      <div class="text-p">
+        <h2>The Golden Mask</h2>
+        <p>A masterpiece of ancient craftsmanship, Tutankhamun’s mask remains the symbol of Egypt’s eternal brilliance.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 The Legacy of Egypt | Designed by Rashwan</p>
+  </footer>
+ <script>
+const sandContainer = document.querySelector('.sand-moving');
+
+for (let i = 0; i <400; i++) {
+  const sand = document.createElement('span');
+  sand.style.setProperty('--x', Math.random());
+  sand.style.setProperty('--y', Math.random());
+  sand.style.setProperty('--speed', Math.random());
+  sand.style.setProperty('--delay', Math.random());
+  sandContainer.appendChild(sand);
+}
+</script>
+  <script src="script.js"></script>
 </body>
 </html>

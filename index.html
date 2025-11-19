@@ -18,7 +18,7 @@
     <div class="card-wel">
         <h2>Welcome<br> to my cemetery</h2>
         <h3>مرحبا بكم في مقبرتي</h3>
-        <a href="home.html"><button class="enter-btn">Enter</button></a>
+<button class="enter-btn" id="enterBtn">Enter</button>
     </div>
 
 
@@ -44,6 +44,14 @@ for (let i = 0; i <300; i++) {
   sand.style.setProperty('--delay', Math.random());
   sandContainer.appendChild(sand);
 }
+</script>
+<script>
+document.getElementById('enterBtn').addEventListener('click', () => {
+    document.body.classList.add('fade-out');
+    setTimeout(() => {
+        window.location.href = 'home.html';
+    }, 1000); // بعد 1.5 ثانية يفتح الصفحة التالية
+});
 </script>
 
 </body>
