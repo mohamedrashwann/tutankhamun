@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="home.css" />
   <title>King Tutankhamun</title>
 </head>
@@ -23,23 +23,29 @@
   </header>
 
   <!-- Hero Section -->
-  <section id="hero">
-    <div class="sand-moving"></div>
+  <section id="hero" aria-label="Hero section">
+    <video autoplay muted loop playsinline id="bg-video" poster="">
+      <source src="./SnapInsta.to_AQN_ktRBbvfYSGCFz7UQaDPKsns5gHaD9BzXE806YvQcJN3cq60K4fYCDBrtIZYbeZyxa9QFWBif8lRuNLfAHG1mj8O49hMSyV0XYsg.mp4" type="video/mp4" />
+      <!-- fallback text -->
+      Your browser does not support HTML5 video.
+    </video>
+
+    <div class="overlay"></div>
+
+    <div class="sand-moving" aria-hidden="true"></div>
+
     <div class="hero-content">
       <h1>Uncover the Legacy of the Golden Pharaoh</h1>
       <p>Step into the ancient world of mystery, power, and eternal glory.</p>
       <a href="#timeline" class="btn">Start Exploring</a>
     </div>
   </section>
-  <div class="sand-moving"></div>
 
   <!-- Timeline Section -->
-  <section id="timeline" class="vertical-sequence">
-        <div class="sand-moving"></div>
-
+  <section id="timeline" class="vertical-sequence" aria-label="Timeline">
     <div class="dot">
       <div class="pic-p">
-        <img src="./image/Gold-Mummy-Mask-of-King-Tutankhamun.png" alt="King Tut" />
+        <img src="./image/Gold-Mummy-Mask-of-King-Tutankhamun.png" alt="King Tut mask" />
       </div>
       <div class="text-p">
         <h2>The Boy King</h2>
@@ -49,7 +55,7 @@
 
     <div class="dot">
       <div class="pic-p">
-        <img src="./image/Tut7.png" alt="Tomb" />
+        <img src="./image/Tut7.png" alt="Tomb discovery" />
       </div>
       <div class="text-p">
         <h2>The Tomb Discovery</h2>
@@ -59,31 +65,43 @@
 
     <div class="dot">
       <div class="pic-p">
-        <img src="./image/mask.png" alt="Mask" />
+        <img src="./image/mask.png" alt="Golden mask" />
       </div>
       <div class="text-p">
         <h2>The Golden Mask</h2>
         <p>A masterpiece of ancient craftsmanship, Tutankhamun’s mask remains the symbol of Egypt’s eternal brilliance.</p>
       </div>
     </div>
+
+    <!-- extra items to show pattern -->
+    <div class="dot">
+      <div class="pic-p">
+        <img src="./image/Gold-Mummy-Mask-of-King-Tutankhamun.png" alt="Mask 2" />
+      </div>
+      <div class="text-p">
+        <h2>Legacy</h2>
+        <p>The artifacts of Tutankhamun continue to inspire and educate millions who seek the story of ancient Egypt.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery placeholder -->
+  <section id="gallery" style="padding:60px 20px; text-align:center;">
+    <h2>Gallery</h2>
+    <p>Images and artifacts.</p>
+  </section>
+
+  <!-- Contact placeholder -->
+  <section id="contact" style="padding:60px 20px; text-align:center;">
+    <h2>Contact</h2>
+    <p>Contact details here.</p>
   </section>
 
   <!-- Footer -->
   <footer>
     <p>© 2025 The Legacy of Egypt | Designed by Rashwan</p>
   </footer>
- <script>
-const sandContainer = document.querySelector('.sand-moving');
 
-for (let i = 0; i <400; i++) {
-  const sand = document.createElement('span');
-  sand.style.setProperty('--x', Math.random());
-  sand.style.setProperty('--y', Math.random());
-  sand.style.setProperty('--speed', Math.random());
-  sand.style.setProperty('--delay', Math.random());
-  sandContainer.appendChild(sand);
-}
-</script>
   <script src="script.js"></script>
 </body>
 </html>

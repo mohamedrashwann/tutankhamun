@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Blaka+Ink&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Reem+Kufi+Fun:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <title>tutankhamun</title>
+</head>
+<body>
+    <div class="pic-liner"></div>
+<div class="sand-moving"></div>
+    <div class="card-wel">
+        <h2>Welcome<br> to my cemetery</h2>
+        <h3>مرحبا بكم في مقبرتي</h3>
+<button class="enter-btn" id="enterBtn">Enter</button>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+const sandContainer = document.querySelector('.sand-moving');
+
+for (let i = 0; i <200; i++) {
+  const sand = document.createElement('span');
+  sand.style.setProperty('--x', Math.random());
+  sand.style.setProperty('--y', Math.random());
+  sand.style.setProperty('--speed', Math.random());
+  sand.style.setProperty('--delay', Math.random());
+  sandContainer.appendChild(sand);
+}
+</script>
+<script>
+document.getElementById('enterBtn').addEventListener('click', () => {
+    document.body.classList.add('fade-out');
+    setTimeout(() => {
+        window.location.href = 'home.html';
+    }, 1000); // بعد 1.5 ثانية يفتح الصفحة التالية
+});
+</script>
+
+</body>
+</html>
