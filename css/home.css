@@ -137,6 +137,7 @@ body {
 .hero-content h1 {
   font-size: 44px;
   line-height: 1.05;
+  font-weight: 900;
   background: linear-gradient(45deg, #ffd700, #ff8c00);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -145,6 +146,7 @@ body {
 
 .hero-content p {
   font-size: 18px;
+  font-weight: 500;
   margin-bottom: 22px;
   color: #e8e1d6;
 }
